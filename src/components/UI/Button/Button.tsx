@@ -1,9 +1,16 @@
 import styles from './Button.module.css';
+import {ReactNode} from "react";
 
-const Button = (props: any) => {
+interface ButtonProps {
+    type: 'button' | 'submit' | 'reset' | undefined;
+    onClick?: () => void;
+    children: ReactNode;
+}
+
+const Button = (buttonProps: ButtonProps) => {
     return (
-        <button type={props.type} className={styles.button} onClick={props.onClick}>
-            {props.children}
+        <button type={buttonProps.type} className={styles.button} onClick={buttonProps.onClick}>
+            {buttonProps.children}
         </button>
     );
 };

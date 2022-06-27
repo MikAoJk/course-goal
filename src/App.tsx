@@ -5,12 +5,15 @@ import CourseInput from "./components/CourseGoals/CourseInput/CourseInput";
 
 function App() {
 
-    const [courseGoals, setCourseGoals] = useState([
-        {text: 'Do all exercises!', id: 'g1'},
-        {text: 'Finish the course!', id: 'g2'}
-    ]);
+    const doAllExercises: CourseGoals = {id: 'g1', text: 'Do all exercises!'}
+    const finishthecourse: CourseGoals = {id: 'g2', text: 'Finish the course!'}
 
-    const addGoalHandler = (enteredText: any) => {
+    const initCourseGoals =
+        [doAllExercises, finishthecourse]
+
+    const [courseGoals, setCourseGoals] = useState(initCourseGoals);
+
+    const addGoalHandler = (enteredText: string) => {
         setCourseGoals(prevGoals => {
             const updatedGoals = [...prevGoals];
             updatedGoals.unshift({text: enteredText, id: Math.random().toString()});
@@ -45,5 +48,11 @@ function App() {
         </div>
     );
 }
+
+export type CourseGoals = {
+    id: string,
+    text: string
+}
+
 
 export default App;

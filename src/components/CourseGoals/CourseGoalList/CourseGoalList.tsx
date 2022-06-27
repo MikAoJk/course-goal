@@ -1,14 +1,20 @@
 import CourseGoalItem from "../CourseGoalItem/CourseGoalItem";
 import './CourseGoalList.css';
+import {CourseGoals} from "../../../App";
 
-const CourseGoalList = (props: { items: any[]; onDeleteItem: any; }) => {
+interface CourseGoalListProps {
+    onDeleteItem: (goalId: string) => void;
+    items: CourseGoals[];
+}
+
+const CourseGoalList = (courseGoalListProps: CourseGoalListProps) => {
     return (
         <ul className="goal-list">
-            {props.items.map(goal => (
+            {courseGoalListProps.items.map(goal => (
                 <CourseGoalItem
                     key={goal.id}
                     id={goal.id}
-                    onDelete={props.onDeleteItem}
+                    onDelete={courseGoalListProps.onDeleteItem}
                 >
                     {goal.text}
                 </CourseGoalItem>

@@ -1,14 +1,21 @@
 import './CourseGoalItem.css';
+import {ReactNode} from "react";
 
-const CourseGoalItem = (props: any) => {
+interface CourseGoalItemProps {
+    onDelete: (id: string) => void;
+    id: string;
+    children: ReactNode;
+}
+
+const CourseGoalItem = (courseGoalItemProps: CourseGoalItemProps) => {
 
     const deleteHandler = () => {
-        props.onDelete(props.id);
+        courseGoalItemProps.onDelete(courseGoalItemProps.id);
     };
 
     return (
         <li className="goal-item" onClick={deleteHandler}>
-            {props.children}
+            {courseGoalItemProps.children}
         </li>
     );
 };
