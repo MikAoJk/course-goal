@@ -1,3 +1,5 @@
+[![build and deploy](https://github.com/MikAoJk/course-goal/actions/workflows/buildAndDeploy.yml/badge.svg?branch=main)](https://github.com/MikAoJk/course-goal/actions/workflows/buildAndDeploy.yml)
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
