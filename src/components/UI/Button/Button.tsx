@@ -1,4 +1,5 @@
-import styles from './Button.module.css';
+//import styles from './Button.module.css';
+import styled from "styled-components";
 import {ReactNode} from "react";
 
 interface ButtonProps {
@@ -7,6 +8,9 @@ interface ButtonProps {
     children: ReactNode;
 }
 
+const Button = styled.button``;
+
+/*
 const Button = (buttonProps: ButtonProps) => {
     return (
         <button type={buttonProps.type} className={styles.button} onClick={buttonProps.onClick}>
@@ -14,5 +18,6 @@ const Button = (buttonProps: ButtonProps) => {
         </button>
     );
 };
+ */
 
 export default Button;
