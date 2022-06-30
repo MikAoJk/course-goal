@@ -1,12 +1,12 @@
-import {ReactNode} from "react";
 import styled from "styled-components";
 
+/*
 interface ButtonProps {
     type: 'button' | 'submit' | 'reset' | undefined;
     onClick?: () => void;
     children: ReactNode;
 }
-
+*/
 
 const Button = styled.button`
     width: 100%;
