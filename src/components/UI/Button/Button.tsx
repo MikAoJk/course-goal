@@ -1,13 +1,14 @@
-import styled from "styled-components";
+import {ReactNode} from "react";
+import styles from "./Button.module.css"
 
-/*
+
 interface ButtonProps {
     type: 'button' | 'submit' | 'reset' | undefined;
     onClick?: () => void;
     children: ReactNode;
 }
-*/
 
+/*
 const Button = styled.button`
     width: 100%;
     font: inherit;
@@ -34,9 +35,9 @@ const Button = styled.button`
 }
 `;
 
+ */
 
 
-/*
 const Button = (buttonProps: ButtonProps) => {
     return (
         <button type={buttonProps.type} className={styles.button} onClick={buttonProps.onClick}>
@@ -45,6 +46,5 @@ const Button = (buttonProps: ButtonProps) => {
     );
 };
 
- */
 
 export default Button;
